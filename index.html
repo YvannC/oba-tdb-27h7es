@@ -158,6 +158,7 @@
   <button class="tab" data-v="v-edf">Raccordement EDF</button>
   <button class="tab" data-v="v-achem">Acheminement</button>
   <button class="tab" data-v="v-phasage">Planning &amp; démarches</button>
+  <button class="tab" data-v="v-contacts">Contacts</button>
 </div>
 
 <!-- ══════════════ SYNTHÈSE & SUIVI ══════════════ -->
@@ -701,6 +702,90 @@
     <div class="card detail" id="det-adm" style="margin-top:14px"><div class="k">Fiche démarche</div><p class="empty">Cliquez une ligne pour afficher sa fiche.</p></div>
     <div class="card" style="margin-top:14px"><div class="k">À garder en tête</div>
       <p style="font-size:13.5px">Les délais d'instruction ne courent qu'à partir d'un <strong>dossier complet</strong> (une demande de pièces remet le compteur à zéro) ; l'affichage sur le terrain déclenche le délai de recours des tiers (2 mois) — ne pas construire avant la purge ; le CUb obtenu vers nov. 2026 <strong>fige les règles PLU/PPRN pendant 18 mois</strong> (jusqu'à mi-2028), ce qui couvre tout le calendrier jusqu'à l'ouverture du dur.</p></div>
+  </div>
+</div>
+
+<!-- ══════════════ CONTACTS ══════════════ -->
+<div class="view" id="v-contacts">
+  <style>
+    .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:12px}
+    .cc{background:#fff;border:1px solid #e5dccb;border-radius:8px;padding:14px 15px;display:flex;flex-direction:column;gap:6px}
+    .cc .who{font-size:15px;font-weight:800}
+    .cc .role{font-family:'Courier New',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lagon)}
+    .cc .org{font-size:12px;color:#6b665c}
+    .cc a.tel{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;font-weight:700;color:var(--vert-nuit);text-decoration:none;font-family:'Courier New',monospace;background:var(--sable);padding:7px 11px;border-radius:6px;margin-top:2px}
+    .cc a.tel:active{background:#eddec4}
+    .cc a.mail{font-size:12px;color:var(--lagon);text-decoration:none;word-break:break-all}
+    .cc .note{font-size:12px;color:#3d3a33;line-height:1.45}
+    .cc .miss{font-family:'Courier New',monospace;font-size:11px;color:#B01F66;background:#FDE3EE;padding:5px 9px;border-radius:6px;display:inline-block}
+    .cc.core{border-left:4px solid var(--bougain)}
+    .chead{font-family:'Courier New',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a857b;margin:16px 0 8px;border-bottom:1.5px solid var(--vert-nuit);padding-bottom:5px}
+    .chead:first-of-type{margin-top:0}
+    @media(max-width:640px){.cgrid{grid-template-columns:1fr}}
+  </style>
+  <div class="card" style="margin-bottom:14px">
+    <div class="k">Répertoire du dossier</div>
+    <h3>Tous les contacts du projet — appui sur un numéro pour appeler</h3>
+    <p>Les numéros s'ouvrent directement dans le téléphone. Les fiches marquées « numéro à récupérer » attendent une coordonnée : donne-la moi et je complète le répertoire (et la base Excel) dans la foulée.</p>
+  </div>
+
+  <div class="chead">Porteurs du projet</div>
+  <div class="cgrid">
+    <div class="cc core"><span class="role">Porteur de projet</span><span class="who">Yvann Clio</span>
+      <a class="mail" href="mailto:yvann.clio@gmail.com">yvann.clio@gmail.com</a>
+      <span class="note">Pilote général du dossier.</span></div>
+    <div class="cc core"><span class="role">Co-porteuse</span><span class="who">Haïcha Pattery</span>
+      <a class="mail" href="mailto:pattery.haicha@gmail.com">pattery.haicha@gmail.com</a>
+      <span class="note">Accès éditeur au Drive projet.</span></div>
+  </div>
+
+  <div class="chead">Relais clés</div>
+  <div class="cgrid">
+    <div class="cc core"><span class="role">Contact EDF · cousin</span><span class="who">Rudy Sainte-Rose</span>
+      <a class="tel" href="tel:+596696888929">📞 +596 696 88 89 29</a>
+      <span class="note">A communiqué le process de raccordement (vérifié conforme aux sources officielles). A demandé les photos terrain du 04/08. Numéro personnel.</span></div>
+    <div class="cc core"><span class="role">Cabinet du maire · Schoelcher</span><span class="who">Claudia Couffe</span>
+      <a class="tel" href="tel:+596696257076">📞 +596 696 25 70 76</a>
+      <span class="note"><strong>En congés jusqu'au 20/08/2026.</strong> Appuiera le courrier à la mairie en interne à son retour. Numéro personnel.</span></div>
+    <div class="cc core"><span class="role">Logistique &amp; acheminement</span><span class="who">Giovanni</span>
+      <span class="miss">numéro à récupérer</span>
+      <span class="note">Ami spécialiste transit. Pilote les 9 jalons d'acheminement ; 4 questions en cours (accès convoi, levage, octroi de mer, Incoterm).</span></div>
+  </div>
+
+  <div class="chead">Administrations &amp; réseaux</div>
+  <div class="cgrid">
+    <div class="cc"><span class="role">Gestionnaire de réseau</span><span class="who">EDF SEI Martinique — raccordement</span>
+      <a class="tel" href="tel:+596596592200">📞 0596 59 22 00</a>
+      <a class="mail" href="mailto:sei-martinique-raccordement@edf.fr">sei-martinique-raccordement@edf.fr</a>
+      <span class="note">GR ATC, Immeuble Cascades, BP 1103, 97248 Fort-de-France Cedex — accueil 7h à 12h30. Repère du support à citer : « 4 109 10785 27 ».</span></div>
+    <div class="cc"><span class="role">Urbanisme</span><span class="who">Mairie de Schoelcher — service urbanisme</span>
+      <a class="tel" href="tel:+596596727272">📞 0596 72 72 72</a>
+      <span class="note">Standard (rue Fesseinheim, Le Bourg) — demander le service urbanisme. Ouvert lun/jeu 7h30-13h et 14h-17h, mar/mer/ven 7h30-14h. RDV cette semaine : DPU renforcé ? emplacement réservé ? servitudes ? + certificat d'adressage et arrêté de voirie pour le levage.</span></div>
+    <div class="cc"><span class="role">Eau &amp; assainissement</span><span class="who">Odyssi</span>
+      <a class="tel" href="tel:+596596712010">📞 0596 71 20 10</a>
+      <span class="note">Service client — branchement eau/assainissement à caler sur la DP.</span></div>
+    <div class="cc"><span class="role">Sécurité incendie ERP</span><span class="who">SDIS 972 / commission de sécurité</span>
+      <span class="miss">contact via la mairie</span>
+      <span class="note">Instruit l'AT ERP 5e catégorie — c'est la mairie qui saisit la commission.</span></div>
+  </div>
+
+  <div class="chead">Professionnels à missionner</div>
+  <div class="cgrid">
+    <div class="cc"><span class="role">Foncier</span><span class="who">Notaire</span>
+      <span class="miss">coordonnées à ajouter</span>
+      <span class="note">Régularisation succession/donation en cours — échéance visée fin 2026, nécessaire pour le PC.</span></div>
+    <div class="cc"><span class="role">Bornage &amp; topo</span><span class="who">Géomètre-expert</span>
+      <span class="miss">à missionner en priorité</span>
+      <span class="note">Bornage + relevé topo : conditionne études, plans, CUb et autorisations. Annuaire : geometre-expert.fr.</span></div>
+    <div class="cc"><span class="role">Containers</span><span class="who">Aménageur / agenceur de containers</span>
+      <span class="miss">devis en cours</span>
+      <span class="note">Transformation des 20 pieds — 2 points à verrouiller : allège supprimée 3,20 m, 3 vantaux sur 3 rails. Message envoyé.</span></div>
+    <div class="cc"><span class="role">Démolition</span><span class="who">Diagnostiqueur amiante + entreprise TP</span>
+      <span class="miss">2 devis à demander</span>
+      <span class="note">Diagnostic amiante d'abord, puis nettoyage &amp; dégagement complet du terrain (5 postes).</span></div>
+    <div class="cc"><span class="role">Études</span><span class="who">BE hydraulique + BE géotechnique (G2)</span>
+      <span class="miss">après bornage</span>
+      <span class="note">Étude de risque PPRN (cote de référence) et G2 (liquéfaction FORT, fondations).</span></div>
   </div>
 </div>
 
